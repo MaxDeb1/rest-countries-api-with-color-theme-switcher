@@ -1,0 +1,16 @@
+@import '../../styles';
+
+.card {
+    width: 264px;
+    height: 336px;
+
+    .countryDetails {
+        padding-left: 25px;
+        padding-top: 30px;
+
+        @include themed(){
+            background: t("elements-color");
+            color: t("text-color");
+        }
+    }
+}

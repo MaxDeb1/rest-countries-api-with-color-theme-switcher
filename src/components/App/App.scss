@@ -1,0 +1,10 @@
+@import "../../styles";
+
+.page {
+  height: 100vh;
+  
+  @include themed(){
+      background: t("background-color");
+      color: t("text-color");
+  }
+}

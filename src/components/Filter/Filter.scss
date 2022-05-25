@@ -1,0 +1,103 @@
+@import '../../styles';
+
+.dropdown {
+    height: 96px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    border-radius: 7px;
+    position: relative;
+    cursor: default;
+    -webkit-box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.05); 
+    box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.05);
+
+    @include themed(){
+        background: t("elements-color");
+        color: t("input-color");
+
+    }
+
+    @include mq(small) {
+        height: 56px;
+    }
+}
+
+.dropdown .arrow {
+    border: solid;
+    border-width: 0 2px 2px 0;
+    content: " ";
+    display: inline-block;
+    height: 0;
+    padding: 3px;
+    position: absolute;
+    right: 20px;
+    top: calc(50% - 3px);
+    width: 0;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+
+    @include themed(){
+        border-color: t("text-color");
+    }
+}
+
+.dropdown .arrow.open {
+    transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+}
+
+.dropdown .selected-value {
+    line-height: 1.5;
+    font-size: 14px;
+    font-weight: 300;
+    border: 0px;
+    box-sizing: border-box;
+    cursor: default;
+    outline: none;
+    padding: 8px 52px 8px 25px;
+    transition: all 200ms ease;
+    width: 100%;
+}
+
+.dropdown .options {
+    display: none;
+/*     height: 162px; */
+    border: 0px;
+    border-radius: 7px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+    box-sizing: border-box;
+    margin-top: -1px;
+    padding: 8.5px 0;
+    overflow-y: auto;
+    position: absolute;
+    top: 110%;
+    width: 100%;
+    z-index: 1000;
+    -webkit-overflow-scrolling: touch;
+
+    @include themed(){
+        background: t("elements-color");
+    }
+}
+
+.dropdown .options.open {
+    display: block;
+}
+
+.dropdown .option {
+    box-sizing: border-box;
+    font-size: 14px;
+    cursor: pointer;
+    display: block;
+    padding: 4px 25px;
+
+    @include themed(){
+        color: t("input-color");
+    }
+}
+
+.dropdown .option.selected,
+.dropdown .option:hover {
+    background-color: #f2f9fc;
+    color: #333;
+}

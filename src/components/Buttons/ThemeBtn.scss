@@ -1,0 +1,15 @@
+@import '../../styles';
+
+.btn-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: transparent;
+    border: 0px;
+    cursor: pointer;
+
+    @include themed(){
+        color: t("text-color");
+    }
+}
