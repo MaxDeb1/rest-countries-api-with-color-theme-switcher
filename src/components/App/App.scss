@@ -1,7 +1,7 @@
 @import "../../styles";
 
 .page {
-  height: 100vh;
+  height: 100%;
   
   @include themed(){
       background: t("background-color");

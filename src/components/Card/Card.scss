@@ -3,14 +3,47 @@
 .card {
     width: 264px;
     height: 336px;
+    border-radius: 5px;
+
+    @include themed(){
+        background: t("elements-color");
+        color: t("text-color");
+    }
+}
+
+.flag {
+    width: 100%;
+    height: 160px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.infos {
+    padding-left: 25px;
+    padding-top: 27px;
+
+    .countryName {
+        font-weight: 600;
+        letter-spacing: 0.04rem;
+    }
 
     .countryDetails {
-        padding-left: 25px;
-        padding-top: 30px;
+        margin-top: 0.7rem;
+        font-size: 14px;
+        line-height: 1.5rem;
 
-        @include themed(){
-            background: t("elements-color");
-            color: t("text-color");
+        span {
+            font-weight: 300;
+
+            @include themed(){
+                color: t("input-color");
+            }
         }
     }
 }

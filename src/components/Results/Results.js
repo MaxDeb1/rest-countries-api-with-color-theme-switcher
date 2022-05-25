@@ -1,10 +1,13 @@
 import React from 'react';
 import Card from '../Card/Card';
 
-const Results = ({datas, loading, error}) => {
+import './Results.scss'
+
+const Results = ({countries}) => {
+
     return (
-        <section>
-            <Card datas={datas} />
+        <section className='results'>
+            <Card countries={countries} />
         </section>
     );
 };

@@ -2,34 +2,29 @@ import React from 'react';
 
 import './Card.scss'
 
-const Card = ({datas}) => {
+const Card = ({countries}) => {
     return (
-        <div className="card">
-        <div className='flag'></div>
-        <div className='countryName'></div>
-        <div className='countryDetails'>
-            <p className='population'></p>
-            <p className='region'></p>
-            <p className='capital'></p>
-        </div>
-    </div>
+        <>
+        {countries.map((country) => {
+            const { flags, name, population, region, capital } = country
+
+            return (
+                <div key={countries.indexOf(country)} className="card">
+                    <div className='flag'>
+                        <img src={flags.svg} alt="" />
+                    </div>
+                    <div className='infos'>
+                        <div className='countryName'>{name.official}</div>
+                        <div className='countryDetails'>
+                            <p className='population'>Population: <span>{population}</span> </p>
+                            <p className='region'>Region: <span>{region}</span> </p>
+                            <p className='capital'>Capital: <span>{capital}</span> </p>
+                        </div>
+                    </div>
+                </div>
+            )
+        })}
+        </>
 )};
 
 export default Card;
-
-/* 
-{datas.map((data) => (
-    <div
-        key={datas.indexOf(data)}
-        className="card"
-    >
-        <div className='flag'></div>
-        <div className='countryName'>{data[0].name}</div>
-        <div className='countryDetails'>
-            <p className='population'></p>
-            <p className='region'></p>
-            <p className='capital'></p>
-        </div>
-    </div>
-))} 
-*/

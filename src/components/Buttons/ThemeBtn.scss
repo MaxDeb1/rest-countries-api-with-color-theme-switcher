@@ -2,12 +2,15 @@
 
 .btn-toggle {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+    align-items:center;
+    justify-content: right;
+    gap: 12px;
     background-color: transparent;
     border: 0px;
+    font-size: 15px;
+    letter-spacing: 0.03rem;
     cursor: pointer;
+    padding: 0;
 
     @include themed(){
         color: t("text-color");
