@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Card.scss'
 
-const Card = ({countries}) => {
+const Card = ({countries, region}) => {
     return (
         <>
         {countries.map((country) => {
@@ -14,9 +14,9 @@ const Card = ({countries}) => {
                         <img src={flags.svg} alt="" />
                     </div>
                     <div className='infos'>
-                        <div className='countryName'>{name.official}</div>
+                        <div className='countryName'>{name.common}</div>
                         <div className='countryDetails'>
-                            <p className='population'>Population: <span>{population}</span> </p>
+                            <p className='population'>Population: <span>{population.toLocaleString('en')}</span> </p>
                             <p className='region'>Region: <span>{region}</span> </p>
                             <p className='capital'>Capital: <span>{capital}</span> </p>
                         </div>

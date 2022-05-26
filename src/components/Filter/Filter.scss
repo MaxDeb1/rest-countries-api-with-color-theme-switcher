@@ -8,8 +8,8 @@
     border-radius: 7px;
     position: relative;
     cursor: default;
-    -webkit-box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.05); 
-    box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.05);
+    -webkit-box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.02); 
+    box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.02);
 
     @include themed(){
         background: t("elements-color");

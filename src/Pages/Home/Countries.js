@@ -8,6 +8,14 @@ import './Countries.scss'
 const Countries = () => {
 
     const [data, setData] = useState([]);
+    const [query, setQuery] = useState('');
+
+    function search(countries) {
+        if(region === null) {
+            return countries.filter(countrie => countrie.name.common.toLowerCase().indexOf(query) > -1);
+        }
+        return countries.filter(countrie => countrie.name.common.toLowerCase().indexOf(query) > -1 && countrie.region.toLowerCase().indexOf(region) > -1);
+    }
 
     const [region, setRegion] = useState(null);
     const options = ["africa", "america", "asia", "europe", "oceania"];
@@ -28,6 +36,7 @@ const Countries = () => {
         try {
             const response = await fetch(url);
             const json = await response.json();
+            sortArrayByName(json);
             setData(json);
         } catch (error) {
             console.log("error", error);
@@ -35,16 +44,27 @@ const Countries = () => {
       };
 
       fetchData();
-    }, []);
+    }, [region]);
+
+    function sortArrayByName(countriesData) {
+        countriesData.sort(function (a, b) {
+            if (a.name.common < b.name.common) {
+                return -1;
+            } else {
+                return 1;
+            };
+        });
+    }
 
     return (
         <main>
             <div className='top'>
-                <SearchInput />
+                <SearchInput query={query} setQuery={setQuery} />
                 <Filter region={region} option={option} />
             </div>
             <Results 
-                countries={data}
+                countries={search(data)}
+                region={region}
             />
         </main>
     );
