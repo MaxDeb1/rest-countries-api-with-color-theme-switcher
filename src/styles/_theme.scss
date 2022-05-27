@@ -1,10 +1,5 @@
 @import "./colors";
 
-/* $text--light: black;
-$text--dark: white;
-$bg--light: white;
-$bg--dark: black; */
-
 $themes: (
   light: (
     elements-color: $White,
@@ -20,16 +15,6 @@ $themes: (
   ),
 );
 
-/* $themes: (
-  light: (
-    bg: $bg--light,
-    text: $text--light,
-  ),
-  dark: (
-    bg: $bg--dark,
-    text: $text--dark,
-  ),
-); */
 
 @mixin themed() {
   @each $theme, $map in $themes {

@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import './styles/index.scss';
 import App from './components/App/App';
-import Countries from './Pages/Home/Countries';
-import Country from './Pages/Country/Country';
+import Countries from './pages/Home/Countries';
+import Country from './pages/Country/Country';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -10,13 +10,6 @@ const Countries = () => {
     const [data, setData] = useState([]);
     const [query, setQuery] = useState('');
 
-    function search(countries) {
-        if(region === null) {
-            return countries.filter(countrie => countrie.name.common.toLowerCase().indexOf(query) > -1);
-        }
-        return countries.filter(countrie => countrie.name.common.toLowerCase().indexOf(query) > -1 && countrie.region.toLowerCase().indexOf(region) > -1);
-    }
-
     const [region, setRegion] = useState(null);
     const options = ["africa", "america", "asia", "europe", "oceania"];
     const option = options.map((option) => (
@@ -28,6 +21,13 @@ const Countries = () => {
         {option}
         </div>
     ));
+
+    function search(countries) {
+        if(region === null) {
+            return countries.filter(countrie => countrie.name.common.toLowerCase().indexOf(query) > -1);
+        }
+        return countries.filter(countrie => countrie.name.common.toLowerCase().indexOf(query) > -1 && countrie.region.toLowerCase().indexOf(region) > -1);
+    }
 
     useEffect(() => {
       const url = "https://restcountries.com/v3.1/all";

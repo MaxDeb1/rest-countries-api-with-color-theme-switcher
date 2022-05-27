@@ -1,19 +1,17 @@
-import React from 'react';
-/* import { Link } from "react-router-dom"; */
+import React, { useContext } from 'react';
+import { ThemeContext } from "../Contexts/ThemeContext";
 
 import './Header.scss'
-import ThemeBtn from '../Buttons/ThemeBtn';
+import DarkModeToggleSwitch from '../Buttons/DarkModeToggleSwitch';
 
 const Header = () => {
+
+    const [dark, toggleDarkMode] = useContext(ThemeContext);
+
     return (
         <header>
             <h1>Where in the world?</h1>
-            <ThemeBtn />
-
-{/*             <nav>
-                <Link to="/">Home</Link> |{" "}
-                <Link to="country">Country</Link>
-            </nav> */}
+            <DarkModeToggleSwitch on={dark} toggle={toggleDarkMode} />
         </header>
     );
 };
