@@ -16,7 +16,7 @@ const DarkModeToggleSwitch = ({ on, toggle }) => {
 
   return (
     <button {...props}>
-      { on ? <IoMoonOutline /> : <IoMoonSharp /> }
+      { on ? <IoMoonSharp /> : <IoMoonOutline /> }
       Dark Mode
     </button>
   )

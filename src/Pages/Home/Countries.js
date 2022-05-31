@@ -11,7 +11,7 @@ const Countries = () => {
     const [query, setQuery] = useState('');
 
     const [region, setRegion] = useState(null);
-    const options = ["africa", "america", "asia", "europe", "oceania"];
+    const options = ["Africa", "America", "Asia", "Europe", "Oceania"];
     const option = options.map((option) => (
         <div
             key={options.indexOf(option)}
@@ -26,7 +26,7 @@ const Countries = () => {
         if(region === null) {
             return countries.filter(countrie => countrie.name.common.toLowerCase().indexOf(query) > -1);
         }
-        return countries.filter(countrie => countrie.name.common.toLowerCase().indexOf(query) > -1 && countrie.region.toLowerCase().indexOf(region) > -1);
+        return countries.filter(countrie => countrie.name.common.toLowerCase().indexOf(query) > -1 && countrie.region.indexOf(region) > -1);
     }
 
     useEffect(() => {

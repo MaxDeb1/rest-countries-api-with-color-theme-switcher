@@ -1,6 +1,12 @@
+@import '../../styles';
+
 .results {
     display: grid;
     grid-template-columns: repeat(auto-fill, 264px);
-    justify-content: space-between;
+    justify-content: center;
     column-gap: 20px;
+
+    @include mq(medium) {
+        justify-content: space-between;
+    }
 }

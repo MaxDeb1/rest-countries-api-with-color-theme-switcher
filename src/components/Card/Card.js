@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 import './Card.scss'
 
@@ -9,7 +10,8 @@ const Card = ({countries, region}) => {
             const { flags, name, population, region, capital } = country
 
             return (
-                <div key={countries.indexOf(country)} className="card">
+              <Link to="country">
+                <div key={countries.indexOf(country)} className="card" >
                     <div className='flag'>
                         <img src={flags.svg} alt="" />
                     </div>
@@ -22,6 +24,7 @@ const Card = ({countries, region}) => {
                         </div>
                     </div>
                 </div>
+              </Link>
             )
         })}
         </>

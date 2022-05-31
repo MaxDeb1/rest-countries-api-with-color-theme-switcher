@@ -4,12 +4,20 @@ main {
     width: 100vw;
     height: 100%;
     min-height: 100vh;
-    padding-inline: clamp(30px, 5.55%, 80px);
+    padding-inline: clamp(16px, 5.55%, 40px);
+
+    @include mq(medium) {
+        padding-inline: clamp(30px, 5.55%, 80px);
+    }
 
     .top {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin: 48px 0;
+        margin: 24px 0 32px;
+
+        @include mq(medium) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 48px 0;
+        }
     }
 }

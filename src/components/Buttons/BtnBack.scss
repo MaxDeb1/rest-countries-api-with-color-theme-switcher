@@ -1,0 +1,39 @@
+@import '../../styles';
+
+.btn-back {
+    width: 105px;
+    height: 30px;
+    display: flex;
+    align-items:center;
+    gap: 3px;
+    padding-left: 1.3em;
+    border: 0px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 300;
+    letter-spacing: 0.03rem;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.02); 
+    box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.02);
+
+    svg {
+        font-size: 1.9rem;
+
+        @include mq(medium) {
+            font-size: 2rem;
+        }
+    }
+
+    @include themed(){
+        background-color: t("elements-color");
+        color: t("text-color");
+    }
+
+    @include mq(medium) {
+        width: 136px;
+        height: 40px;
+        gap: 5px;
+        padding-left: 1.6em;
+        font-size: 0.938rem;
+    }
+}
