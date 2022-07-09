@@ -1,0 +1,93 @@
+@import '../../styles';
+
+.country {
+    height: 100%;
+    padding: 40px 7.467vw;
+
+    @include mq(medium) {
+        height: calc(100vh - 80px);
+        padding: 80px;
+    }
+
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 64px;
+
+        @include mq(medium) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 400px;
+            margin-top: 80px;
+        }
+
+        .flag {
+            max-width: 100%;
+            height: 100%;
+            min-height: 230px;
+            border-radius: 0;
+
+            @include mq(medium) {
+                width: 560px;
+            }
+        }
+    }
+
+    .dataCountry {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 75px auto 127px 90px;
+        margin-top: 16px;
+
+        @include mq(medium) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 90px auto 100px;
+            margin-left: 64px;
+        }
+
+        .countryName {
+            align-self: center;
+            font-size: 1.4rem;
+            font-weight: bold;
+
+            @include mq(medium) {
+                grid-column: 1 / 3 ;
+                font-size: 1.9rem;
+            }
+        }
+
+        .countryDetails {
+            &.secondChunk {
+                align-self: end;
+
+                @include mq(medium) {
+                    align-self: start;
+                    padding-left: 2.22em;
+                }
+            }
+
+            p {
+                font-size: 0.89rem;
+                font-weight: 300;
+                line-height: 2rem;
+
+                @include mq(medium) {
+                    font-size: 1rem;
+                }
+    
+                span {
+                    font-size: 0.95rem;
+                    font-weight: 300;
+        
+                    @include themed(){
+                        color: t("input-color");
+                    }
+                }
+            }
+
+            .languages {
+                display: flex;
+                white-space: pre-wrap;
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+@import '../../styles';
+
+.borderCountriesComponent {
+    display: flex;
+    align-items: center;
+    white-space:nowrap;
+    text-align: start;
+
+    @include mq(medium) {
+        grid-column: 1 / 3 ;
+        grid-row: 3 / 4;
+    }
+
+    > * {
+        font-size: 0.85rem;
+        font-weight: 300;
+
+        @include themed(){
+            color: t("input-color");
+        }
+    }
+}
+
+.borderCountries {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-left: 12px;
+}
+
+.borderCountrie {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 96px;
+    height: 28px;
+    border-radius: 5px;
+
+    @include themed(){
+        background-color: t("elements-color");
+        color: t("text-color");
+    }
+}

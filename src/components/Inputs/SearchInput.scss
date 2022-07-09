@@ -1,0 +1,55 @@
+@import "../../styles";
+
+.search {
+  width: 100%;
+  max-width: 480px;
+  height: 48px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  font-size: 1.3rem;
+  background-color: $DarkElements;
+  padding-left: 1.8rem;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.02);
+  box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.02);
+
+  @include themed() {
+    background: t("elements-color");
+  }
+
+  @include mq(medium) {
+    height: 56px;
+    margin-bottom: 0;
+    font-size: 1.45rem;
+  }
+
+  input {
+    padding: 3.22px 0px 9px 20px;
+    background-color: transparent;
+    color: $White;
+    border: 0px;
+
+    @include themed() {
+      color: t("text-color");
+    }
+
+    &::placeholder {
+      font-size: 0.719rem;
+      font-weight: 400;
+
+      @include themed() {
+        color: t("input-color");
+      }
+
+      @include mq(medium) {
+        font-size: 0.875rem;
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
