@@ -1,4 +1,4 @@
-import './LoadingHome.scss'
+import './style.scss'
 
 const LoadingHome = () => {
     return (

@@ -1,6 +1,6 @@
-import Filter from '../../components/Filter/Filter';
+import Filter from '../../components/Filter';
 import SearchInput from '../../components/Inputs/SearchInput';
-import Results from '../../components/Results/Results';
+import Results from '../../components/Results';
 
 import "./style.scss";
 

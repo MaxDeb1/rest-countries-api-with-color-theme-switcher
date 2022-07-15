@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import './Card.scss'
+import './style.scss'
 import { BodydataProps } from "../../types/Types";
 import { CountryListProps } from "../../types/Types";
 

@@ -1,12 +1,12 @@
-import Card from '../Card/Card';
+import Card from '../Card';
 import { useSelector } from 'react-redux';
 import { selectRegion } from "../../redux/features/regionSlice";
 import { selectSearch } from "../../redux/features/searchSlice";
 
-import './Results.scss'
+import './style.scss'
 import { CountryDetailProps } from "../../types/Types";
 import { useGetCountriesQuery } from "../../redux/services/countries";
-import Loading from "../Loader/LoadingHome";
+import Loading from "../Loaders/LoadingHome";
 
 const Results = () => {
     const { 

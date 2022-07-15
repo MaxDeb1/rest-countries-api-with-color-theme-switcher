@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from 'react-redux'
 import { handleRegion, selectRegion } from "../../redux/features/regionSlice";
 
-import "./Filter.scss";
+import "./style.scss";
 
 const Filter = () => {
   const node = useRef<HTMLDivElement>(null!);

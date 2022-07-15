@@ -1,9 +1,8 @@
-import React from 'react';
 import { AiOutlineSearch } from "react-icons/ai";
 import { useDispatch, useSelector } from 'react-redux'
-import { handleSearch, selectSearch } from "../../redux/features/searchSlice";
+import { handleSearch, selectSearch } from "../../../redux/features/searchSlice";
 
-import './SearchInput.scss'
+import './style.scss'
 
 
 const SearchInput = () => {

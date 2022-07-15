@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 
 import "./style.scss";
 import { useGetCountryByNameQuery } from "../../redux/services/countries";
-import Loading from "../../components/Loader/LoadingCountry";
-import BorderCountries from "../../components/BorderCountries/BorderCountries";
+import Loading from "../../components/Loaders/LoadingCountry";
+import BorderCountries from "../../components/BorderCountries";
 
 const Country = () => {
   const { name } = useParams();

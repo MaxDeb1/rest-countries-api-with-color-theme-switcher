@@ -1,4 +1,4 @@
-import './LoadingCountry.scss'
+import './style.scss'
 
 const LoadingCountry = () => {
     return (

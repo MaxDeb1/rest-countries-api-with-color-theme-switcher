@@ -2,14 +2,12 @@ import { configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
 
 import { countriesApi } from './services/countries';
-import themeReducer from "./features/themeSlice"
 import searchReducer from "./features/searchSlice";
 import regionReducer from "./features/regionSlice";
 
 export const store = configureStore({
   reducer: {
     [countriesApi.reducerPath]: countriesApi.reducer,
-    theme: themeReducer,
     search: searchReducer,
     region: regionReducer,
   },

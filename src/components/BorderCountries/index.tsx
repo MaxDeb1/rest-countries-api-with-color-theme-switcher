@@ -1,6 +1,6 @@
-import "./BorderCountries.scss"
+import "./style.scss"
 import { useGetCountriesQuery } from "../../redux/services/countries";
-import Loading from "../Loader/LoadingBorderCountries";
+import Loading from "../Loaders/LoadingBorderCountries";
 import { BordersProps } from "../../types/Types";
 import { CountryListProps } from "../../types/Types";
 import { BorderCountriesProps } from "../../types/Types";

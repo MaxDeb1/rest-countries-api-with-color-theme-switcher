@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { IoIosArrowRoundBack } from "react-icons/io";
 
-import './BtnBack.scss'
+import './style.scss'
 
 const BtnBack = () => {
     let navigate = useNavigate();
